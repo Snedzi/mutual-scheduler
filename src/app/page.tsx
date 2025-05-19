@@ -101,7 +101,7 @@ export default function Home() {
             >
               ×
             </button>
-            <h2 className="text-2xl font-bold mb-4 text-lime-400">You'll need an invite, loser.</h2>
+            <h2 className="text-2xl font-bold mb-4 text-lime-400">You&apos;ll need an invite, loser.</h2>
             <p className="text-white text-lg mb-4">Go make some friends!<br/>(The invite is a direct URL, which the Group owner can send you.)</p>
             <button
               className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-6 rounded-lg mt-2"

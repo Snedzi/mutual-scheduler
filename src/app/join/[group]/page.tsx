@@ -52,7 +52,7 @@ export default function JoinGroupPage() {
         setAvailability(user.availability || []);
       }
     }
-  }, [group, name]);
+  }, [group, name, storageKey]);
 
   const handleJoin = (e: React.FormEvent) => {
     e.preventDefault();
@@ -173,8 +173,8 @@ export default function JoinGroupPage() {
             <div className="mb-2 w-full">
               <h3 className="text-lg font-bold text-white mb-2 text-center">Group Members:</h3>
               <ul className="text-gray-200">
-                {members.map((m, i) => (
-                  <li key={i} className="py-1">
+                {members.map((m) => (
+                  <li key={m.name} className="py-1">
                     <span className="font-semibold">{m.name}</span>
                     {(m.availability ?? []).length > 0 && (
                       <span className="ml-2 text-sm text-blue-300">(
