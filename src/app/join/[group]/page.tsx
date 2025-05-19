@@ -152,7 +152,7 @@ export default function JoinGroupPage() {
                 {availability.length === 0 ? (
                   <span className="text-gray-400">No availability added yet.</span>
                 ) : (
-                  availability.map((a, idx) => (
+                  availability.map((a) => (
                     <span key={a.date + a.slot} className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm flex items-center gap-1">
                       {formatDate(a.date)} {SLOT_LABELS[a.slot]}
                       <button
