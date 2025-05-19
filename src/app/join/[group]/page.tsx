@@ -178,9 +178,9 @@ export default function JoinGroupPage() {
                     <span className="font-semibold">{m.name}</span>
                     {(m.availability ?? []).length > 0 && (
                       <span className="ml-2 text-sm text-blue-300">(
-                        {(m.availability ?? []).map((a, idx) => (
+                        {(m.availability ?? []).map((a, i, arr) => (
                           <span key={a.date + a.slot}>
-                            {formatDate(a.date)} {SLOT_LABELS[a.slot]}{idx < (m.availability ?? []).length - 1 ? ', ' : ''}
+                            {formatDate(a.date)} {SLOT_LABELS[a.slot]}{i < arr.length - 1 ? ', ' : ''}
                           </span>
                         ))}
                       )</span>

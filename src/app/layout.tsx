@@ -1,6 +1,7 @@
 'use client';
 import './globals.css';
 import React from 'react';
+import Image from 'next/image';
 
 export default function RootLayout({
   children,
@@ -17,10 +18,13 @@ export default function RootLayout({
         </header>
         <main className="flex flex-col items-center justify-center w-full px-2 flex-1 bg-[url('/star-bg.svg')] bg-repeat bg-center pt-1">
           <div className="flex flex-col items-center mb-1">
-            <img
+            <Image
               src="https://cdn.ktar.com/ktar/wp-content/uploads/2018/08/Pitbull-AP-Photo-640x480-1.jpg"
               alt="Cartoon man logo"
+              width={64}
+              height={64}
               className="w-16 h-16 rounded-full border-2 border-blue-400 shadow object-cover"
+              priority
             />
             <div className="mt-1 bg-white border border-gray-400 rounded-xl px-3 py-1 text-xs font-semibold text-black shadow-lg text-center">
               Life is so crazy right now man
